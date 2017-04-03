@@ -1,0 +1,22 @@
+{
+  "name": "kuleana_crossfit_wod_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ray Farias <rayrfarias@gmail.com> (http://github.com/sgnl)",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-winston": "^2.3.0",
+    "mongoose": "^4.9.3",
+    "pug": "^2.0.0-beta11",
+    "twilio": "^2.11.1",
+    "winston": "^2.3.1"
+  }
+}
