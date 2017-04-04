@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title WOD to SMS
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans:500%7CRoboto' rel='stylesheet')
+  link(href='/css/styles.css' rel='stylesheet')
+body
+  .container
+    header.section
+      h1.copy--centered WOD to 📱
+
+    section.section.section--centered-vertical
+      header.header.header--shorter-bottom
+        h4 Phone number format: X-XXX-XXX-XXXX
+
+      form.form
+        input.form__email(
+          name='phone-number'
+          type='text'
+          placeholder='📞 enter your phone number here  👍'
+          required)
+        button.form__submit.copy--uppercase.copy--faint subscribe
+
+    footer.section.footer

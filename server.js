@@ -15,7 +15,7 @@ server.use(express.static('public'))
 server.use(bodyParser.urlencoded({ extended: true }))
 
 server.get('/', (req, res) => {
-  res.json('hihihihihi')
+  res.render('index')
 })
 
-module.exports = server;
+module.exports = server
