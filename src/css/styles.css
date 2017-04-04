@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   background: #FDFC47; /* fallback for old browsers */
   background: linear-gradient(to left, #CBDD38 , #24FE41); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -13,6 +17,11 @@ body {
   font-weight: 500;
   letter-spacing: 1px;
   color: #333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 
 .container {
@@ -49,7 +58,7 @@ body {
 }
 
 .section {
-  margin: 2em 0;
+  margin: 1em 0;
   min-width: 700px;
 
   &--border {

@@ -1,28 +1,28 @@
 doctype html
 html(lang="en")
-head
-  meta(charset="UTF-8")
-  title WOD to SMS
-  link(href='https://fonts.googleapis.com/css?family=Open+Sans:500%7CRoboto' rel='stylesheet')
-  link(href='/css/styles.css' rel='stylesheet')
-  script(src="/js/client.js")
-body
-  .container
-    header.section
-      h1.copy--centered 🏋 to 📱
+  head
+    meta(charset="UTF-8")
+    title WOD to SMS
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:500%7CRoboto' rel='stylesheet')
+    link(href='/css/styles.css' rel='stylesheet')
+    script(src="/js/client.js")
+  body
+    .container
+      header.section
+        h1.copy--centered 🏋 to 📱
 
-    section.section.section--centered-vertical
-      header.header.header--shorter-bottom
-        h4 Phone number format: 1-808-321-1234
+      section.section.section--centered-vertical
+        header.header.header--shorter-bottom
+          h4 Phone number format: 1-808-321-1234
 
-      form.form
-        input.form__email(
-          name='phone-number'
-          type='text'
-          placeholder='📞 enter your phone number here  👍'
-          required)
-        input.form__submit.copy.copy--uppercase.copy--faint(
-          type='submit'
-          value='subscribe')
+        form.form
+          input.form__email(
+            name='phone-number'
+            type='text'
+            placeholder='📞 enter your phone number here  👍'
+            required)
+          input.form__submit.copy.copy--uppercase.copy--faint(
+            type='submit'
+            value='subscribe')
 
-    footer.section.footer
+      footer.section.footer
