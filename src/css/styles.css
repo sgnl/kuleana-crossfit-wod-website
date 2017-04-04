@@ -1,0 +1,156 @@
+
+%reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #EFEFBB;
+  background: linear-gradient(to left, #EFEFBB , #D4D3DD);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5em;
+
+  &--shorter-bottom {
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    @extend %reset;
+    font-size: 2em;
+  }
+
+  h2 {
+    @extend %reset;
+    font-size: 1.5em;
+  }
+
+  h3 {
+    @extend %reset;
+    font-size: 1.25em;
+  }
+}
+
+.section {
+  margin: 2em 0;
+  min-width: 700px;
+
+  &--border {
+    padding: 2em;
+    border: 1px solid #ddd;
+  }
+}
+
+.copy {
+  @extend %reset;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+
+  &--faint {
+    color: hsla(0,0%,100%, 0.5);
+  }
+
+  &--fainter {
+    color: hsla(0,0%,100%, 0.2);
+  }
+
+  &--small {
+    font-size: 0.75em;
+  }
+
+  &--link {
+    text-decoration: none;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--captialize {
+    text-transform: capitalize;
+  }
+
+  &--centered {
+    text-align: center
+  }
+
+  &--bottom-border {
+    border-bottom: 1px solid #fff;
+  }
+
+  &--bottom-border-faint {
+    border-bottom: 1px solid hsla(0,0%,100%,.4);
+  }
+}
+
+.form {
+  @extend %reset;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+
+  &__email {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: hsla(0,0%,100%, 0.8);
+    border: none;
+    font-size: inherit;
+    text-align: center;
+  }
+
+  &__submit {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    background: hsla(0,0%,100%,.4);
+    border: none;
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+.emoji {
+  &--rainbow {
+    &::before, &::after { content: ' 🌈 '; }
+  }
+
+  &--envelope {
+    &::before, &::after { content: ' 💌 '; }
+  }
+
+  &--link {
+    &::before, &::after { content: ' 🔗 '; }
+  }
+}
+
+.why {
+  list-style-type: none;
+
+  &__reason {
+    padding: 1.5em 0;
+  }
+}
+
+.footer {
+  cursor: help;
+}
