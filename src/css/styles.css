@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #EFEFBB;
-  background: linear-gradient(to left, #EFEFBB , #D4D3DD);
+  background: #FDFC47; /* fallback for old browsers */
+  background: linear-gradient(to left, #CBDD38 , #24FE41); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: 500;
