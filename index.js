@@ -1,5 +1,5 @@
 const server = require('./server')
-const { logger } = require('./services')
+const logger = require('./services/logger')
 
 const PORT = process.env.PORT
 
