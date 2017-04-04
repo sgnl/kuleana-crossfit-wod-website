@@ -5,10 +5,12 @@ window.onload = function(){
   form.addEventListener('submit', event => {
     event.preventDefault()
     let phoneNumberInput = event.target.querySelector('.form__email').value
-    if (!validatePhoneNumber(phoneNumberInput)) {
+    let isValidPhoneNumber = validatePhoneNumber(phoneNumberInput);
+    if (!isValidPhoneNumber) {
       // show user feedback
     } else {
       // POST to server
+      postToServer(isValidPhoneNumber);
     }
   })
 
@@ -20,5 +22,24 @@ window.onload = function(){
     }
 
     return Number(phoneNumberVal.join(''))
+  }
+
+  function postToServer(phoneNumber) {
+    const data = `phone-number=${phoneNumber}`;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === 4) {
+        console.log(this.responseText);
+      }
+    });
+
+    xhr.open("POST", "/sub");
+    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("cache-control", "no-cache");
+
+    xhr.send(data);
   }
 }

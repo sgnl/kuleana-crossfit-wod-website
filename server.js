@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const winston = require('winston')
 const expressWinston = require('express-winston')
 
+const { addNewSubscriberToDatabase } = require('./services/mongo')
 const logger = require('./services/logger')
 
 const server = express()
@@ -16,6 +17,13 @@ server.use(bodyParser.urlencoded({ extended: true }))
 
 server.get('/', (req, res) => {
   res.render('index')
+})
+
+server.post('/sub', (req, res) => {
+  addNewSubscriberToDatabase(req.body['phone-number'])
+    .then(phoneNumber => {
+      res.json({ phoneNumber })
+    })
 })
 
 module.exports = server
