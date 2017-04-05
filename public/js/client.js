@@ -1,6 +1,8 @@
 window.onload = function(){
 
   let form = document.querySelector('.form')
+  let errorDisplay = document.querySelector('.error-message')
+  let resetInput = false;
 
   form.addEventListener('submit', event => {
     event.preventDefault()
@@ -8,11 +10,22 @@ window.onload = function(){
     let isValidPhoneNumber = validatePhoneNumber(phoneNumberInput)
     if (!isValidPhoneNumber) {
       // show user feedback
+      resetInput = true;
+      errorDisplay.classList.remove('hidden')
     } else {
       // POST to server
       postToServer(isValidPhoneNumber)
     }
   })
+
+  let input = form.querySelector('input')
+
+  input.addEventListener('focus', event => {
+    errorDisplay.classList.add('hidden')
+    if (resetInput) {
+      event.target.value = ''
+    }
+  });
 
   function validatePhoneNumber (phoneNumberString) {
     let phoneNumberVal = phoneNumberString.split('').filter(char => !isNaN(Number(char)))
