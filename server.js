@@ -20,6 +20,10 @@ server.get('/', (req, res) => {
   res.render('index')
 })
 
+server.get('/thank-you', (req, res) => {
+  res.render('thank-you')
+})
+
 server.post('/sub', validatePayload(['phone-number']),  (req, res) => {
   addNewSubscriberToDatabase(req.body['phone-number'])
     .then(phoneNumber => {

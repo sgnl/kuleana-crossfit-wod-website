@@ -45,8 +45,7 @@ window.onload = function(){
 
     xhr.addEventListener('readystatechange', function () {
       if (this.readyState === 4) {
-        console.log(this.responseText)
-        successfulSubsciption()
+        window.location.href = '/thank-you'
       }
     })
 
@@ -55,9 +54,5 @@ window.onload = function(){
     xhr.setRequestHeader('cache-control', 'no-cache')
 
     xhr.send(data)
-  }
-
-  function successfulSubsciption() {
-
   }
 }
