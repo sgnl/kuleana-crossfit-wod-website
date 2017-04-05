@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "postcss ./src/css/styles.css --use precss --use autoprefixer --output public/css/styles.css",
-    "dev": "npm run build:css -- -w & env $(cat .env) nodemon index.js"
+    "dev": "npm run build:css -- -w & env $(cat .env) nodemon index.js",
+    "start": "npm run build:css && node index.js",
+    "now:deploy": "env $(cat .env) now -e MONGO_USER -e MONGO_PASSWORD -e MONGO_URL -e ENVIRONMENT=PRODUCTION"
   },
   "keywords": [],
   "author": "Ray Farias <rayrfarias@gmail.com> (http://github.com/sgnl)",
